@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+
+class AnimationItemWidget extends StatelessWidget {
+  const AnimationItemWidget({
+    super.key,
+    required this.title,
+    required this.widget,
+  });
+  final String title;
+  final Widget widget;
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => widget),
+        );
+      },
+      child: Container(
+        color: Colors.blue,
+        padding: EdgeInsets.symmetric(
+          vertical: 10,
+        ),
+        child: Text(
+          title,
+          style: TextStyle(
+            color: Colors.white,
+          ),
+          textAlign: TextAlign.center,
+        ),
+      ),
+    );
+  }
+}
