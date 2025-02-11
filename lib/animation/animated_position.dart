@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class AnimatedPositionExample extends StatefulWidget {
   const AnimatedPositionExample({super.key});
 
@@ -13,15 +15,10 @@ class _AnimatedPositionExampleState extends State<AnimatedPositionExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Animated Position',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-        centerTitle: true,
+      appBar: CustomAppBar(
+        title: 'Animated Position',
+        titleColor: Colors.black,
+        background: Colors.orange,
       ),
       body: Stack(
         children: [

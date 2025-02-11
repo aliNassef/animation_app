@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class AnimatedPhysicalModelExample extends StatefulWidget {
   const AnimatedPhysicalModelExample({super.key});
 
@@ -20,15 +22,10 @@ class _AnimatedPhysicalModelExampleState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Animated Physical Model',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-        centerTitle: true,
+      appBar: CustomAppBar(
+        title: 'Animated Physical Model',
+        titleColor: Colors.black,
+        background: Colors.orange,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,

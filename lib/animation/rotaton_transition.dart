@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class RotatonTransitionExample extends StatefulWidget {
   const RotatonTransitionExample({super.key});
 
@@ -33,15 +35,10 @@ class _RotatonTransitionExampleState extends State<RotatonTransitionExample>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Rotaton Transition',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-        centerTitle: true,
+      appBar: CustomAppBar(
+        title: 'Rotaton Transition',
+        titleColor: Colors.white,
+        background: Colors.teal,
       ),
       body: Center(
         child: RotationTransition(

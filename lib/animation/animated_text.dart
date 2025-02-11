@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class AnimatedTextExample extends StatefulWidget {
   const AnimatedTextExample({super.key});
 
@@ -14,15 +16,10 @@ class _AnimatedTextExampleState extends State<AnimatedTextExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Animated Text',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-        centerTitle: true,
+      appBar: CustomAppBar(
+        title: 'Animated Text',
+        titleColor: Colors.black,
+        background: Colors.orange,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

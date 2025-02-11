@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class SizeTransitionExample extends StatefulWidget {
   const SizeTransitionExample({super.key});
 
@@ -27,15 +29,10 @@ class _SizeTransitionExampleState extends State<SizeTransitionExample>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        centerTitle: true,
-        title: Text(
-          'Size Transition',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
+      appBar: CustomAppBar(
+        title: 'Size Transition',
+        titleColor: Colors.white,
+        background: Colors.teal,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

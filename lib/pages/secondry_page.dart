@@ -1,3 +1,4 @@
+import 'package:animation_course/components/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class SecondryPage extends StatelessWidget {
@@ -7,10 +8,10 @@ class SecondryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.teal,
-      appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
-        title: Text('Secondry Page'),
-        centerTitle: true,
+      appBar: CustomAppBar(
+        title: 'Secondry Page',
+        titleColor: Colors.white,
+        background: Colors.brown,
       ),
       body: Center(
         child: TextButton(

@@ -1,3 +1,4 @@
+import 'package:animation_course/components/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedOpacityExample extends StatefulWidget {
@@ -14,12 +15,10 @@ class _AnimatedOpacityExampleState extends State<AnimatedOpacityExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Animated Opacity',
-          style: TextStyle(color: Colors.white),
-        ),
+      appBar: CustomAppBar(
+        title: 'Animated Opacity',
+        titleColor: Colors.black,
+        background: Colors.orange,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,

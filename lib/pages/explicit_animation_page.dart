@@ -1,5 +1,6 @@
 import 'package:animation_course/animation/fade_transation.dart';
 import 'package:animation_course/animation/size_transition.dart';
+import 'package:animation_course/components/custom_app_bar.dart';
 import 'package:animation_course/widgets/animation_item.dart';
 import 'package:flutter/material.dart';
 
@@ -17,18 +18,13 @@ class ExplicitAnimation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        centerTitle: true,
-        title: Text(
-          'Explict Animation',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
+      appBar: CustomAppBar(
+        title: 'Explicit Animation',
+        titleColor: Colors.white,
+        background: Colors.teal,
       ),
       body: ListView.separated(
-        padding: EdgeInsets.only(top: 10),
+        padding: EdgeInsets.only(top: 10, left: 16, right: 16),
         itemBuilder: (_, idx) => explicitAnimationItems[idx],
         separatorBuilder: (_, __) => SizedBox(
           height: 10,
@@ -43,37 +39,46 @@ List explicitAnimationItems = [
   AnimationItemWidget(
     title: 'Positioned Transition',
     widget: PositendTranslationExample(),
+    color: Colors.teal,
   ),
   AnimationItemWidget(
     title: 'Size Transition',
+    color: Colors.teal,
     widget: SizeTransitionExample(),
   ),
   AnimationItemWidget(
     title: 'Rotation Transition',
+    color: Colors.teal,
     widget: RotatonTransitionExample(),
   ),
   AnimationItemWidget(
     title: 'Animated Builder',
+    color: Colors.teal,
     widget: AnimatedBuilderExample(),
   ),
   AnimationItemWidget(
     title: 'Fade Transation',
+    color: Colors.teal,
     widget: FadeTransationExample(),
   ),
   AnimationItemWidget(
     title: 'Positend Directional Transition',
+    color: Colors.teal,
     widget: PositionDirectionalTransitionExample(),
   ),
   AnimationItemWidget(
     title: 'Tween Animation Builder',
+    color: Colors.teal,
     widget: TweenAnimationBuilderExample(),
   ),
   AnimationItemWidget(
     title: 'Default Text Style Transition',
+    color: Colors.teal,
     widget: DefaultTextStyleTransationExample(),
   ),
   AnimationItemWidget(
     title: 'Indexed Stack Transation',
+    color: Colors.teal,
     widget: IndexedStackTransationExample(),
   ),
 ];

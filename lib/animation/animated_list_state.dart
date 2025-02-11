@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class AnimatedListStateExample extends StatefulWidget {
   const AnimatedListStateExample({super.key});
 
@@ -39,12 +41,10 @@ class _AnimatedListStateExampleState extends State<AnimatedListStateExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Animated List State',
-          style: TextStyle(color: Colors.white),
-        ),
+      appBar: CustomAppBar(
+        title: 'Animated List State',
+        titleColor: Colors.black,
+        background: Colors.orange,
       ),
       body: AnimatedList(
         key: _listKey,
@@ -56,7 +56,8 @@ class _AnimatedListStateExampleState extends State<AnimatedListStateExample> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(items[index]),
-                GestureDetector(  onTap:() =>  _removeItem(index) ,child: Icon(Icons.delete)),
+                GestureDetector(
+                    onTap: () => _removeItem(index), child: Icon(Icons.delete)),
               ],
             ),
           ),
@@ -66,7 +67,6 @@ class _AnimatedListStateExampleState extends State<AnimatedListStateExample> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           _addItem();
-
         },
         child: Icon(Icons.add),
       ),

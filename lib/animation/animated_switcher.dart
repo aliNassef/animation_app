@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class AnimatedSwitcherExample extends StatefulWidget {
   const AnimatedSwitcherExample({super.key});
 
@@ -13,12 +15,10 @@ class _AnimatedSwitcherExampleState extends State<AnimatedSwitcherExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Animated Switcher',
-          style: TextStyle(color: Colors.white),
-        ),
+      appBar: CustomAppBar(
+        title: 'Animated Switcher',
+        titleColor: Colors.black,
+        background: Colors.orange,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -51,7 +51,7 @@ class _AnimatedSwitcherExampleState extends State<AnimatedSwitcherExample> {
                       setState(() {});
                     },
                     child: CircularProgressIndicator(),
-            ),
+                  ),
           ),
         ],
       ),

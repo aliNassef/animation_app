@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class PositionDirectionalTransitionExample extends StatefulWidget {
   const PositionDirectionalTransitionExample({super.key});
 
@@ -35,12 +37,10 @@ class _PositionDirectionalTransitionExampleState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Position Directional Transition',
-          style: TextStyle(color: Colors.white),
-        ),
+      appBar: CustomAppBar(
+        title: 'Position Directional Transition',
+        titleColor: Colors.white,
+        background: Colors.teal,
       ),
       body: Stack(
         children: [

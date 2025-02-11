@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class AnimatedPositionDirectionalExample extends StatefulWidget {
   const AnimatedPositionDirectionalExample({super.key});
 
@@ -43,15 +45,10 @@ class _AnimatedPositionDirectionalExampleState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Animated Position Directional',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-        centerTitle: true,
+      appBar: CustomAppBar(
+        title: 'Animated Position Directional',
+        titleColor: Colors.black,
+        background: Colors.orange,
       ),
       body: Center(
         child: Stack(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class DefaultTextStyleTransationExample extends StatefulWidget {
   const DefaultTextStyleTransationExample({super.key});
 
@@ -42,15 +44,10 @@ class _DefaultTextStyleTransationExampleState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Default Text Style Transation',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-        centerTitle: true,
+      appBar: CustomAppBar(
+        title: 'Default Text Style Transation',
+        titleColor: Colors.white,
+        background: Colors.teal,
       ),
       body: Center(
         child: Column(

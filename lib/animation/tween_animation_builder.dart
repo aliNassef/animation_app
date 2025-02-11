@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class TweenAnimationBuilderExample extends StatelessWidget {
   const TweenAnimationBuilderExample({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Tween Animation Builder',
-          style: TextStyle(color: Colors.white),
-        ),
+      appBar: CustomAppBar(
+        title: 'Tween Animation Builder',
+        titleColor: Colors.white,
+        background: Colors.teal,
       ),
       body: Center(
         child: TweenAnimationBuilder(

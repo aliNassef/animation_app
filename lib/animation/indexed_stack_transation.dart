@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class IndexedStackTransationExample extends StatefulWidget {
   const IndexedStackTransationExample({super.key});
 
@@ -35,12 +37,10 @@ class _IndexedStackTransationExampleState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Indexed Stack Transation',
-          style: TextStyle(color: Colors.white),
-        ),
+      appBar: CustomAppBar(
+        title: 'Indexed Stack Transation',
+        titleColor: Colors.white,
+        background: Colors.teal,
       ),
       body: IndexedStack(
         index: _crrentIndex,

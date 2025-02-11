@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
+import '../components/custom_app_bar.dart';
+
 class LottieAnimationExample extends StatefulWidget {
   const LottieAnimationExample({super.key});
 
@@ -21,12 +23,10 @@ class _LottieAnimationExampleState extends State<LottieAnimationExample> {
       'assets/lottie/bird.json',
     ];
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Lottie Animation',
-          style: TextStyle(color: Colors.white),
-        ),
+      appBar: CustomAppBar(
+        title: 'Lottie Animation',
+        titleColor: Colors.black,
+        background: Colors.red,
       ),
       body: PageView.builder(
         itemCount: paths.length,

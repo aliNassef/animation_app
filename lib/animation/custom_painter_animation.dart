@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class CustomPainterAnimationExample extends StatefulWidget {
   const CustomPainterAnimationExample({super.key});
 
@@ -41,15 +43,10 @@ class _CustomPainterAnimationExampleState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        centerTitle: true,
-        title: Text(
-          'Custom Painter Animation',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
+      appBar: CustomAppBar(
+        title: 'Custom Painter Animation',
+        titleColor: Colors.black,
+        background: Colors.red,
       ),
       body: Center(
         child: AnimatedBuilder(

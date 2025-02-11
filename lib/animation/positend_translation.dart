@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class PositendTranslationExample extends StatefulWidget {
   const PositendTranslationExample({super.key});
 
@@ -42,15 +44,10 @@ class _PositendTranslationExampleState extends State<PositendTranslationExample>
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Position Transition',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-        centerTitle: true,
+      appBar: CustomAppBar(
+        title: 'Position Transition',
+        titleColor: Colors.white,
+        background: Colors.teal,
       ),
       body: Stack(
         children: [

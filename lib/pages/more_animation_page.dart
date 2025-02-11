@@ -1,4 +1,4 @@
-import 'package:animation_course/animation/rive_animation.dart';
+import 'package:animation_course/components/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../animation/custom_painter_animation.dart';
@@ -10,15 +10,10 @@ class MoreAnimation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        centerTitle: true,
-        title: Text(
-          'More Animation',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
+      appBar: CustomAppBar(
+        title: 'More Animation',
+        titleColor: Colors.black,
+        background: Colors.red,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -26,6 +21,7 @@ class MoreAnimation extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(
                 vertical: 10,
+                horizontal: 16,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,

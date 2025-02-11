@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class AnimatedPaddingExample extends StatefulWidget {
   const AnimatedPaddingExample({super.key});
 
@@ -12,15 +14,10 @@ class _AnimatedPaddingExampleState extends State<AnimatedPaddingExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Animated Padding',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-        centerTitle: true,
+      appBar: CustomAppBar(
+        title: 'Animated Padding',
+        titleColor: Colors.black,
+        background: Colors.orange,
       ),
       body: GridView.builder(
         padding: EdgeInsets.all(10),

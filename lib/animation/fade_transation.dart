@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class FadeTransationExample extends StatefulWidget {
   const FadeTransationExample({super.key});
 
@@ -29,12 +31,10 @@ class _FadeTransationExampleState extends State<FadeTransationExample>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Fade Transition',
-          style: TextStyle(color: Colors.white),
-        ),
+      appBar: CustomAppBar(
+        title: 'Fade Transition',
+        titleColor: Colors.white,
+        background: Colors.teal,
       ),
       body: Center(
         child: FadeTransition(

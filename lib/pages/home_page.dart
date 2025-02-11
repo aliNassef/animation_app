@@ -1,3 +1,5 @@
+import 'package:animation_course/components/animation_component.dart';
+import 'package:animation_course/components/custom_app_bar.dart';
 import 'package:animation_course/pages/explicit_animation_page.dart';
 import 'package:animation_course/pages/implicit_animation_page.dart';
 import 'package:animation_course/pages/more_animation_page.dart';
@@ -10,83 +12,53 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        centerTitle: true,
-        title: Text(
-          'Home Page',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
+      appBar: CustomAppBar(
+        title: 'Home Page',
+        titleColor: Colors.white,
+        background: Colors.blue,
       ),
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              color: Colors.blue,
-              child: ListTile(
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ImplicitAnimation(),
-                  ),
-                ),
-                leading: SizedBox(),
-                title: Text('Implict Animation'),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              AnimationComponent(
+                background: Colors.orange,
+                title: 'Implicit Animation',
+                titleColor: Colors.black,
+                child: ImplicitAnimation(),
               ),
-            ),
-            SizedBox(
-              height: 16,
-            ),
-            Container(
-              color: Colors.blue,
-              child: ListTile(
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ExplicitAnimation(),
-                  ),
-                ),
-                leading: SizedBox(),
-                title: Text('Explict Animation'),
+              SizedBox(
+                height: 16,
               ),
-            ),
-            SizedBox(
-              height: 16,
-            ),
-            Container(
-              color: Colors.blue,
-              child: ListTile(
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => PageTransitionAnimation(),
-                  ),
-                ),
-                leading: SizedBox(),
-                title: Text('Page Transition'),
+              AnimationComponent(
+                background: Colors.teal,
+                title: 'Explict Animation',
+                titleColor: Colors.white,
+                child: ExplicitAnimation(),
               ),
-            ),
-            SizedBox(
-              height: 16,
-            ),
-            Container(
-              color: Colors.blue,
-              child: ListTile(
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => MoreAnimation(),
-                  ),
-                ),
-                leading: SizedBox(),
-                title: Text('More Animation'),
+              SizedBox(
+                height: 16,
               ),
-            ),
-          ],
+              AnimationComponent(
+                background: Colors.black,
+                title: 'Page Transition',
+                titleColor: Colors.white,
+                child: PageTransitionAnimation(),
+              ),
+              SizedBox(
+                height: 16,
+              ),
+              AnimationComponent(
+                background: Colors.red,
+                title: 'More Animation',
+                titleColor: Colors.black,
+                child: MoreAnimation(),
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -5,9 +5,11 @@ class AnimationItemWidget extends StatelessWidget {
     super.key,
     required this.title,
     required this.widget,
+    this.color,
   });
   final String title;
   final Widget widget;
+  final Color? color;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -18,7 +20,7 @@ class AnimationItemWidget extends StatelessWidget {
         );
       },
       child: Container(
-        color: Colors.blue,
+        color: color ?? Colors.blue,
         padding: EdgeInsets.symmetric(
           vertical: 10,
         ),

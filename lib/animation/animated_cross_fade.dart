@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class AnimatedCrossFadeExample extends StatefulWidget {
   const AnimatedCrossFadeExample({super.key});
 
@@ -13,12 +15,10 @@ class _AnimatedCrossFadeExampleState extends State<AnimatedCrossFadeExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Animated CrossFade',
-          style: TextStyle(color: Colors.white),
-        ),
+      appBar: CustomAppBar(
+        title: 'Animated CrossFade',
+        titleColor: Colors.black,
+        background: Colors.orange,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -44,7 +44,7 @@ class _AnimatedCrossFadeExampleState extends State<AnimatedCrossFadeExample> {
   }
 
   _makeCrossFade() {
-     _crossFadeStaterossFade == CrossFadeState.showSecond
+    _crossFadeStaterossFade == CrossFadeState.showSecond
         ? _crossFadeStaterossFade = CrossFadeState.showFirst
         : _crossFadeStaterossFade = CrossFadeState.showSecond;
     setState(() {});

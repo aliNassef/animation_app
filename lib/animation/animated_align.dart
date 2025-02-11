@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class AnimatedAlignExample extends StatefulWidget {
   const AnimatedAlignExample({super.key});
 
@@ -12,15 +14,10 @@ class _AnimatedAlignExampleState extends State<AnimatedAlignExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Animated Align',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
-        centerTitle: true,
+      appBar: CustomAppBar(
+        title: 'Animated Align',
+        titleColor: Colors.black,
+        background: Colors.orange,
       ),
       body: SafeArea(
         child: Stack(

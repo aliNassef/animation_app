@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class AnimatedContainerExample extends StatefulWidget {
   const AnimatedContainerExample({super.key});
 
@@ -15,12 +17,10 @@ class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Animated Container',
-          style: TextStyle(color: Colors.white),
-        ),
+      appBar: CustomAppBar(
+        title: 'Animated Container',
+        titleColor: Colors.black,
+        background: Colors.orange,
       ),
       body: Center(
         child: AnimatedContainer(

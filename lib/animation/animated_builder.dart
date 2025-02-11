@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../components/custom_app_bar.dart';
+
 class AnimatedBuilderExample extends StatefulWidget {
   const AnimatedBuilderExample({super.key});
 
@@ -32,12 +34,10 @@ class _AnimatedBuilderExampleState extends State<AnimatedBuilderExample>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text(
-          'Animated Builder',
-          style: TextStyle(color: Colors.white),
-        ),
+      appBar: CustomAppBar(
+        title: 'Animated Builder',
+        titleColor: Colors.white,
+        background: Colors.teal,
       ),
       body: Center(
         child: AnimatedBuilder(
