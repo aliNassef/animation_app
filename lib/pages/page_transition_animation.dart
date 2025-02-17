@@ -17,6 +17,7 @@ class PageTransitionAnimation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
+        
         title: 'Page Transition',
         titleColor: Colors.white,
         background: Colors.black,
@@ -44,7 +45,12 @@ class PageTransitionAnimation extends StatelessWidget {
                             ),
                           );
                         },
-                        child: Text('Page Fade Transation'),
+                        child: Text(
+                          'Page Fade Transation',
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -65,7 +71,12 @@ class PageTransitionAnimation extends StatelessWidget {
                             ),
                           );
                         },
-                        child: Text('Page scale Transation'),
+                        child: Text(
+                          'Page scale Transation',
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -86,7 +97,12 @@ class PageTransitionAnimation extends StatelessWidget {
                             ),
                           );
                         },
-                        child: Text('Page rotate Transation'),
+                        child: Text(
+                          'Page rotate Transation',
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -107,7 +123,12 @@ class PageTransitionAnimation extends StatelessWidget {
                             ),
                           );
                         },
-                        child: Text('Page slide Transation'),
+                        child: Text(
+                          'Page slide Transation',
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -128,7 +149,12 @@ class PageTransitionAnimation extends StatelessWidget {
                             ),
                           );
                         },
-                        child: Text('Page size Transation'),
+                        child: Text(
+                          'Page size Transation',
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -149,7 +175,12 @@ class PageTransitionAnimation extends StatelessWidget {
                             ),
                           );
                         },
-                        child: Text('Page mix fade & size Transation'),
+                        child: Text(
+                          'Page mix fade & size Transation',
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
                       ),
                     ],
                   ),
@@ -170,7 +201,12 @@ class PageTransitionAnimation extends StatelessWidget {
                             ),
                           );
                         },
-                        child: Text('Page mix scale & rotate Transation'),
+                        child: Text(
+                          'Page mix scale & rotate Transation',
+                          style: TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
                       ),
                     ],
                   ),

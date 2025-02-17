@@ -20,14 +20,17 @@ class AnimationItemWidget extends StatelessWidget {
         );
       },
       child: Container(
-        color: color ?? Colors.blue,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color: color ?? Colors.blue,
+        ),
         padding: EdgeInsets.symmetric(
           vertical: 10,
         ),
         child: Text(
           title,
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
           ),
           textAlign: TextAlign.center,
         ),
